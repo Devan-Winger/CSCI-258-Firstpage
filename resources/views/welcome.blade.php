@@ -1231,7 +1231,7 @@
                             @auth
                                 <a href="{{ url('/dashboard') }}"
                                     class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
-                                    dashboard
+                                    
                                 </a>
                             @else
                                 <a href="{{ route('login') }}"
@@ -1286,7 +1286,7 @@
                                     </div>
 
                                     <div class="pt-3 sm:pt-5 lg:pt-0">
-                                        <h2 class="text-xl font-semibold text-black dark:text-white">IceCream</h2>
+                                        <h2 class="text-xl font-semibold text-black dark:text-white">Fashboard</h2>
 
                                         <p class="mt-4 text-sm/relaxed">
                                             Laravel has wonderful documentation covering every aspect of the framework.
