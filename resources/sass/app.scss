@@ -1,0 +1,309 @@
+// Fonts
+@import url('https://fonts.bunny.net/css?family=Nunito');
+
+// Body
+$body-bg: #343434;
+
+// Typography
+$font-family-sans-serif: 'Roboto Mono', monospace;
+
+$gray-base:              #000 !default;
+$gray-darker:            lighten($gray-base, 13.5%) !default; // #222
+$gray-dark:              lighten($gray-base, 20%) !default;   // #333
+$gray:                   lighten($gray-base, 33.5%) !default; // #555
+$gray-light:             lighten($gray-base, 46.7%) !default; // #777
+$gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
+
+$brand-primary:         darken(#428bca, 6.5%) !default; // #337ab7
+$brand-success:         #5cb85c !default;
+$brand-info:            #5bc0de !default;
+$brand-warning:         #f0ad4e !default;
+$brand-danger:          #d9534f !default;
+
+
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+
+//** Background color for `<body>`.
+$body-bg:               #343434 !default;
+//** Global text color on `<body>`.
+$text-color:            #fff !default;
+
+//** Global textual link color.
+$link-color:            $brand-primary !default;
+//** Link hover color set via `darken()` function.
+$link-hover-color:      darken($link-color, 15%) !default;
+//** Link hover decoration.
+$link-hover-decoration: underline !default;
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+$card-title-color: white;
+$body-bg: #343434;
+$body-color: #ffffff;
+
+/* set a font for the entire page and a bg color */
+html {
+    color: #ffffff;
+    font-weight: 100;
+    background-color: #343434;
+}
+nav {
+    color: #ffffff;
+}
+body {
+    background-color: #343434;
+}
+main {
+    height: 90vh;
+}
+.active {
+    color: #6d6d6d !important;
+    font-weight:bold !important;
+}
+.navbar {
+    background-color: #000000;
+    color: #ffffff;
+}
+.navbar-brand {
+    font-weight:bold;
+    color:#ffffff;
+}
+.nav-link {
+    color: #ffffff;
+    font-weight:bold;
+}
+.navbar-toggler-icon {
+    color: #ffffff;
+}
+
+/* change color on the hovered link */
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+    color: #424242;
+}
+/* Dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    color: #ffffff;
+    background-color: #000000;
+    min-width: inherit;
+    box-shadow: 0px 8px 16px 0px rgb(0, 0, 0);
+    z-index: 1;
+}
+/* Links inside the dropdown */
+.dropdown-content a {
+    float: none;
+    color: #252525;
+    font-weight: bold;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* change color on hover again */
+.dropdown-content a:hover {
+    background-color: #424242;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* for the forms css */
+label {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* makes nice boxes for text that match the page */
+input {
+    color: white;
+    background-color: #343434;
+}
+
+select {
+    width: 15%;
+    border-radius: 4px;
+    background-color: white;
+    color: black;
+}
+input[type=text],
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: medium;
+}
+
+/* this makes the sunbit button look nice */
+input[type=button],
+input[type=submit],
+input[type=reset] {
+    border: 5px, black;
+    color: white;
+    padding: 12px 28px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: #756d6d;
+    font-weight: bold;
+    font-size: large;
+}
+input[type=submit]:hover {
+    background-color: #252525;
+    color: #a4b3b6
+}
+.readMoreBtn {
+    color: #ffffff;
+}
+.readMoreBtn:hover {
+    color: #252525;
+}
+/* the radio buttons didnt pop out enough 
+.radio-toolbar input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+}
+
+.radio-toolbar label {
+    display: inline-block;
+    background-color: #d93f87;
+    padding: 10px 20px;
+    font-family: sans-serif, Arial;
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+.radio-toolbar input[type="radio"]:checked+label {
+    background-color: #9b3c68;
+    color: #a4b3b6;
+    border-color: black;
+}
+
+.radio-toolbar label:hover {
+    background-color: #9b3c68;
+}
+*/
+.item {
+    position: relative;
+    margin: 10px 0;
+    padding-left: 6px;
+}
+
+.item span {
+    color: red;
+}
+
+.item input {
+    width: 90%;
+}
+
+.item select {
+    width: 90%;
+}
+.item .radio-toolbar {
+    width: 100%;
+    position: static;
+    margin: 10px 0;
+}
+
+.week {
+    display: flex;
+}
+
+.colums {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.colums div {
+    width: 49%;
+}
+
+.rowItemCenter {
+    align-content: center;
+}
+
+th {
+    color: #ffffff;
+}
+td {
+    size: fixed;
+    color: white;
+}
+
+.calccontainer {
+    max-width: 400px;
+    margin: 10vh auto 0 auto;
+    box-shadow: 0px 0px 43px 17px rgba(153,153,153,1);
+}
+
+#calctext {
+    text-align:center;
+    text-align: right;
+    height: 70px;
+    line-height: 70px;
+    padding: 16px 8px;
+    font-size: 40px;
+}
+
+.calcbuttons {
+    display: grid;
+    border-bottom: 1px solid #999;
+    border-left: 1px solid#999;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.calcbuttons > div {
+    border-top: 1px solid #999;
+    border-right: 1px solid#999;
+}
+
+.calcbutton {
+    line-height: flex;
+    text-align: center;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+#equal {
+    background-color: rgb(85, 85, 255);
+    color: white;
+}
+
+.calcbutton:hover {
+    background-color: #323330;
+    color: white;
+    transition: 0.5s ease-in-out;
+}
+table th {
+    color: #ffffff;
+    width: 25%;
+}
+table tr {
+    color: #ffffff;
+    height: 25%;
+}
+.urgent{
+    background-color: #482f2f;
+}
+#listArea > :first-child [name=moveBtnUp]{
+    pointer-events: none;
+    opacity: 0.5;
+}
+#listArea > :last-child [name=moveBtnDown]{
+    pointer-events: none;
+    opacity: 0.5;
+}
