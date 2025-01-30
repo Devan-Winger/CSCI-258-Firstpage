@@ -50,7 +50,7 @@
                                     <div class="col-2">
                                         <div class="item">
                                             <label for="temp" class="form-label">Temperature Fahrenheit:</label><br>
-                                            <input type="text" id="temp" name="temp" value="{{ $temp }}">
+                                            <input type="text" id="temp" name="temp" value="{{ $temp ?? "0" }}">
                                         </div>
                                     </div>
                                 </div>
@@ -58,7 +58,7 @@
                                 <div class="row">
                                     <div class="col-2">
                                         <div class="item">
-                                            Temperature celsius: {{ $finalTemp }}
+                                            Temperature celsius: {{ $finalTemp ?? "0" }}
                                         </div>
                                     </div>
                                 </div>

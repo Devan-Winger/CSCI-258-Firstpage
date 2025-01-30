@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class TemperatureController extends Controller
 {
     public function index(){
-        return view('temperature', ["temp" => 0, "finalTemp" => 0]);
+        return view('temperature');
     }
 
     public function show(Request $request){

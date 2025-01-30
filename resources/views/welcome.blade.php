@@ -43,8 +43,8 @@
         </nav>
     </nav>
     <div style="background-color: #343434;">
-        <div class="p-3 mb-2 bg-dark text-white"      style=" background-image: url('https://cdn.discordapp.com/attachments/629172718041956379/1334039394683977748/Pngtreescience_or_technology_background_with_1226624.jpg?ex=679b1480&is=6799c300&hm=22342d0b19e490fde64283f4bb172c014bc82b65504a38fc7391a1d86c79ab78&');
-        background-repeat: no-repeat;"">
+        <div class="p-3 mb-2 bg-dark text-white"      style="background-image: {{asset('image/bg.jpg')}};
+        background-repeat: no-repeat;">
             <div class="container-md">
                 <div class="col-sm">
                     <div style="height: 85vh;">
