@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactsController;
 use App\Http\Controllers\HelloController;
 use App\Http\Controllers\TemperatureController;
 use Illuminate\Support\Facades\Route;
@@ -11,3 +12,4 @@ Route::get('/', function () {
 Route::get('/hello', [HelloController::class, 'index']);
 Route::get('/temperature' , [TemperatureController::class, 'index']);
 Route::post('/temperature' , [TemperatureController::class, 'show'])->name('temperature_show');
+Route::get('/contacts', [ContactsController::class, 'index'])->name('contacts_show');
