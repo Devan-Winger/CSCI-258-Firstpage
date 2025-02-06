@@ -37,6 +37,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/temperature">Temperature</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contacts">Contacts</a>
+                        </li>
                     </ul>
                 </div>
             </div>

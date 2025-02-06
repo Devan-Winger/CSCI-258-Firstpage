@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Temperature</title>
+    <title>Contacts</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
@@ -29,10 +29,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/temperature" style="font-weight:bold;color:#424242">Temperature</a>
+                        <a class="nav-link" href="/temperature">Temperature</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/contacts">Contacts</a>
+                        <a class="nav-link active" aria-current="page" href="/temperature" style="font-weight:bold;color:#424242" href="/contacts">Contacts</a>
                     </li>
                 </ul>
         </div>
@@ -41,36 +41,21 @@
     <div class="p-3 mb-2 bg-dark text-white">
         <div class="container-md">
             <div class="col-sm">
-                <div style="height: 85vh;">
+                <div style="">
                     <div class="row">
                         <div class="col-6">
-                                <h1>fahrenheit to celsius converter</h1>
+                                <h1>Contacts</h1>
                                 <hr>
-                                <form action="{{ route('temperature_show')}}" method="POST">
-                                    @csrf
-                                <div class="row">
-                                    <div class="col-2">
-                                        <div class="item">
-                                            <label for="temp" class="form-label">Temperature Fahrenheit:</label><br>
-                                            <input type="text" id="temp" name="temp" value="{{ $temp ?? "0" }}">
-                                        </div>
-                                    </div>
-                                </div>
-                                <br><br>
-                                <div class="row">
-                                    <div class="col-2">
-                                        <div class="item">
-                                            Temperature celsius: {{ $finalTemp ?? "0" }}
-                                        </div>
-                                    </div>
-                                </div>
-                                <br><br>
+                                @foreach ($dbContent as $item)
                                 <div class="row">
                                     <div class="col">
-                                        <input type="submit" class="btn btn-outline-secondary" value="Submit">
+                                        <h3>{{ $item->first_name }} {{ $item->last_name }}</h3>
+                                        <h4>{{ $item->email }} {{ $item->phone_number }}</h4>
+                                        <h4>{{ $item->birthday }}</h4>
                                     </div>
+                                    <hr>
                                 </div>
-                                </form>
+                                @endforeach
                         </div>
                         <div class="col-4">
 
