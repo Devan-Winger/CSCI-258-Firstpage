@@ -17,7 +17,8 @@
     
 </head>
 
-<body><nav class="navbar-expand -md">
+<body>
+<nav class="navbar-expand -md">
     <nav class="navbar">
         <div class="container-md">
             <a class="navbar-brand" href="../">
@@ -37,7 +38,8 @@
                 </ul>
         </div>
     </nav>
-</nav><div style="background-color: #343434;">
+</nav>
+<div style="background-color: #343434;">
     <div class="p-3 mb-2 bg-dark text-white">
         <div class="container-md">
             <div class="col-sm">

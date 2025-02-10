@@ -13,7 +13,7 @@ class ContactsController extends Controller
      */
     public function index()
     {
-        return view('contacts', ['dbContent' => Contacts::all()]);
+        return view('contacts.contacts', ['dbContent' => Contacts::all()]);
     }
 
     /**
@@ -21,7 +21,12 @@ class ContactsController extends Controller
      */
     public function create()
     {
-        //
+        //ex 4
+        $item = [];
+        $item["name"] = "";
+        $item["completed"] = 0;
+        $item["started"] = "";
+        return view('contacts.create', ['item' => $item]);
     }
 
     /**
@@ -37,7 +42,7 @@ class ContactsController extends Controller
      */
     public function show(Contacts $contacts)
     {
-        //
+        return view('contacts.contact', ['item' => $contacts]);
     }
 
     /**
@@ -45,7 +50,7 @@ class ContactsController extends Controller
      */
     public function edit(Contacts $contacts)
     {
-        //
+        return view("contacts.edit", ["item" => $contacts]);
     }
 
     /**
@@ -53,7 +58,11 @@ class ContactsController extends Controller
      */
     public function update(UpdateContactsRequest $request, Contacts $contacts)
     {
-        //
+        if($contacts["completed"] == 1 && !$request["completed"]){
+            $request["completed"] = 0;
+        }
+        $contacts->update($request->all());
+        return redirect('contacts')->with('status', 'Task updated!');
     }
 
     /**
