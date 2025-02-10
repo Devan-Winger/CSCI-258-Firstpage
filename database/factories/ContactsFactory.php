@@ -17,7 +17,10 @@ class ContactsFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name' => $this->faker->name,
+            'email' => $this->faker->unique()->safeEmail,
+            'birthday' => $this->faker->date(),
+            'user_id' => $this->faker->numberBetween(1, 5),
         ];
     }
 }
