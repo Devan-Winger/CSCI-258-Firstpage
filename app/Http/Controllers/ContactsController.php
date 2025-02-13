@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Contacts;
 use App\Http\Requests\StoreContactsRequest;
 use App\Http\Requests\UpdateContactsRequest;
+use Illuminate\Http\Request;
 
 class ContactsController extends Controller
 {
@@ -21,12 +22,7 @@ class ContactsController extends Controller
      */
     public function create()
     {
-        //ex 4
-        $item = [];
-        $item["name"] = "";
-        $item["completed"] = 0;
-        $item["started"] = "";
-        return view('contacts.create', ['item' => $item]);
+        return view('contacts.create');
     }
 
     /**
@@ -34,14 +30,17 @@ class ContactsController extends Controller
      */
     public function store(StoreContactsRequest $request)
     {
-        //
+        $contact = new Contacts($request->all());
+        $contact->save();
+        return redirect('contacts')->with('status', 'Contact saved!');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Contacts $contacts)
+    public function show($id)
     {
+        $contacts = Contacts::where('id', $id)->first();
         return view('contacts.contact', ['item' => $contacts]);
     }
 
@@ -50,6 +49,7 @@ class ContactsController extends Controller
      */
     public function edit(Contacts $contacts)
     {
+        //$contacts = Contacts::where('id', $id)->first();
         return view("contacts.edit", ["item" => $contacts]);
     }
 
@@ -58,11 +58,9 @@ class ContactsController extends Controller
      */
     public function update(UpdateContactsRequest $request, Contacts $contacts)
     {
-        if($contacts["completed"] == 1 && !$request["completed"]){
-            $request["completed"] = 0;
-        }
+        //$contacts = Contacts::where('id', $id)->first();
         $contacts->update($request->all());
-        return redirect('contacts')->with('status', 'Task updated!');
+        return redirect('contacts')->with('status', 'Contact updated!');
     }
 
     /**

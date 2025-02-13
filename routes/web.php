@@ -10,6 +10,6 @@ Route::get('/', function () {
 });
 
 Route::get('/hello', [HelloController::class, 'index']);
-Route::get('/temperature' , [TemperatureController::class, 'index']);
+Route::get('/temperature' , [TemperatureController::class, 'index'])->name('temperature');
 Route::post('/temperature' , [TemperatureController::class, 'show'])->name('temperature_show');
 Route::resource('contacts', ContactsController::class);

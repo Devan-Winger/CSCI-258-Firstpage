@@ -13,7 +13,7 @@ class ContactsPolicy
      */
     public function viewAny(User $user): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -21,7 +21,7 @@ class ContactsPolicy
      */
     public function view(User $user, Contacts $contacts): bool
     {
-        return false;
+        return true;
     }
 
     /**

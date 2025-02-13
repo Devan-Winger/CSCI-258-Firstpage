@@ -10,7 +10,7 @@ class Contacts extends Model
     /** @use HasFactory<\Database\Factories\ContactsFactory> */
     use HasFactory;
 
-    protected $fillable = ['name', 'email', 'birthday', 'user_id'];
+    protected $fillable = ['first_name','last_name','phone_number','email','birthday'];
     protected $dates = ['birthday'];
     
     public function user(){
